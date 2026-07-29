@@ -477,16 +477,21 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#" aria-label="На главную">
+        <a className="brand" href="https://shakurova-content.ru" aria-label="Вернуться на главную страницу">
           <span className="brand-logo" aria-hidden="true" />
           <span>
             <strong>Джамиля Шакурова</strong>
             <small>ИИ-КОНТЕНТ ДЛЯ БИЗНЕСА</small>
           </span>
         </a>
-        <button className="header-link" type="button" onClick={startDiagnostic}>
-          Начать диагностику
-        </button>
+        <div className="header-actions-nav">
+          <a className="home-link" href="https://shakurova-content.ru">
+            ← На главную
+          </a>
+          <button className="header-link" type="button" onClick={startDiagnostic}>
+            Начать диагностику
+          </button>
+        </div>
       </header>
 
       <section className="hero">
