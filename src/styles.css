@@ -1064,3 +1064,61 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+.header-actions-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.home-link {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(118, 127, 48, 0.55);
+  color: var(--chocolate);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  html, body, #root, main { width: 100%; max-width: 100%; overflow-x: hidden; }
+  .site-header, .hero, .trust-row, .method-section, .result-section, footer {
+    width: calc(100% - 24px);
+  }
+  .site-header { min-height: 68px; gap: 10px; }
+  .brand { min-width: 0; gap: 8px; }
+  .brand-logo { width: 24px; height: 38px; }
+  .brand strong { font-size: 12px; white-space: nowrap; }
+  .brand small { display: none; }
+  .header-actions-nav { gap: 10px; flex: 0 0 auto; }
+  .home-link { font-size: 11px; white-space: nowrap; }
+  .hero { gap: 28px; padding: 36px 0 38px; }
+  .eyebrow { margin-bottom: 18px; letter-spacing: 0.1em; line-height: 1.5; }
+  h1 { font-size: clamp(2.15rem, 11vw, 3rem); line-height: 1.02; overflow-wrap: anywhere; }
+  h1 br { display: none; }
+  .hero-lead { margin-bottom: 24px; font-size: 14px; line-height: 1.65; }
+  .hero-actions { width: 100%; }
+  .primary-button { width: 100%; min-width: 0; }
+  .hero-panel { min-height: 0; overflow: visible; padding: 18px 14px 22px; }
+  .panel-top { gap: 10px; line-height: 1.4; }
+  .panel-top span:first-child { max-width: 68%; }
+  .progress { margin-bottom: 26px; }
+  .hero-panel h2 { font-size: 23px; }
+  .option { width: 100%; min-height: 58px; padding: 12px; }
+  .option-copy strong { font-size: 12px; }
+  .option-copy small { font-size: 10px; }
+  .panel-button { width: 100%; }
+  .trust-row { margin-bottom: 40px; }
+  .method-section, .result-section { padding: 52px 0 64px; }
+  .method-grid, .result-grid { border-left: 0; }
+  .method-grid article, .result-card { min-height: 0; padding: 22px 18px; }
+  .result-heading { gap: 24px; margin-bottom: 30px; }
+  .result-heading h2, .cta-card h2, .ineligible-card h2 { font-size: 30px; }
+  .readiness-score strong { font-size: 46px; }
+  .cta-card, .ineligible-card { padding: 24px 18px; }
+  .cta-actions .primary-button, .secondary-button { width: 100%; }
+  .review-notice, .sector-notice, .stage-note { padding: 16px; }
+  footer { min-height: 94px; font-size: 9px; letter-spacing: 0.06em; }
+  button, a { touch-action: manipulation; }
+}
