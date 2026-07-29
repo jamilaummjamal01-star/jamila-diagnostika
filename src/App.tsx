@@ -108,7 +108,7 @@ const questions: Question[] = [
     title: "Где контент должен работать в первую очередь?",
     help: "Сначала выбираем основную площадку, затем адаптируем сильные материалы под остальные.",
     options: [
-      { value: "instagram", label: "Instagram" },
+      { value: "instagram", label: "Instagram*" },
       { value: "telegram", label: "Telegram" },
       { value: "marketplace", label: "Маркетплейс или карточки товара" },
       { value: "multi", label: "Несколько площадок" },
@@ -360,12 +360,12 @@ function buildStrategy(answers: AnswerMap) {
 
   const channelFormat =
     answers.channel === "instagram"
-      ? "серии для Instagram: Reels без музыки, карусели и предметные визуалы"
+      ? "серии для Instagram*: Reels без музыки, карусели и предметные визуалы"
       : answers.channel === "telegram"
         ? "нативные серии для Telegram: полезный текст, визуальная опора и последовательные касания"
         : answers.channel === "marketplace"
           ? "комплект для карточки товара: обложка, инфографика, детали и короткое видео"
-          : "мастер-серия с адаптацией под Instagram, Telegram и коммерческие площадки";
+          : "мастер-серия с адаптацией под Instagram*, Telegram и коммерческие площадки";
 
   const formats = Array.from(
     new Set([...sector.formats, channelFormat]),
@@ -502,7 +502,7 @@ export default function Home() {
           </div>
           <h1>
             ИИ-контент, который
-            <br />
+            <br />{" "}
             <span>работает на Ваш бизнес.</span>
           </h1>
           <p className="hero-lead">
@@ -813,6 +813,11 @@ export default function Home() {
       <footer>
         <span>© Джамиля Шакурова</span>
         <span>Корни · Современность · Технологии</span>
+        <p className="legal-note">
+          * Instagram — продукт компании Meta Platforms Inc., деятельность
+          которой признана экстремистской и запрещена на территории Российской
+          Федерации.
+        </p>
       </footer>
     </main>
   );
